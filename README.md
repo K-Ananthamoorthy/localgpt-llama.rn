@@ -1,97 +1,112 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+🧠 localgpt-llama.rn
+A privacy-focused React Native application that runs LLaMA-based language models locally on-device using llama.rn. No internet required. 100% offline. Ideal for private, secure, mobile AI experiences.
 
-# Getting Started
+📲 Key Features
+🔒 Fully local LLM inference — powered by llama.rn
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+🧠 LocalGPT experience — lightweight, fast, and private
 
-## Step 1: Start Metro
+📦 Model selection UI — choose from multiple models
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+🔗 Direct Hugging Face integration — fetch and load models easily
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+📱 Device hardware check — automatically checks for minimum requirements (RAM, CPU, etc.)
 
-```sh
-# Using npm
+🎨 Beautiful React Native UI — built for both Android & iOS
+
+🚀 Getting Started
+✅ Make sure you've completed the React Native Environment Setup before proceeding.
+
+1. Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/K-Ananthamoorthy/localgpt-llama.rn.git
+cd localgpt-llama.rn
+2. Install Dependencies
+bash
+Copy
+Edit
+# With npm
+npm install
+
+# OR with yarn
+yarn install
+3. Start the Metro Bundler
+bash
+Copy
+Edit
 npm start
-
-# OR using Yarn
+# OR
 yarn start
-```
-
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
+4. Run the App
+Android
+bash
+Copy
+Edit
 npm run android
-
-# OR using Yarn
+# OR
 yarn android
-```
+iOS
+Make sure CocoaPods are installed and synced:
 
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
+bash
+Copy
+Edit
 bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
 bundle exec pod install
-```
+Then:
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+bash
+Copy
+Edit
 npm run ios
-
-# OR using Yarn
+# OR
 yarn ios
-```
+🧪 Development Notes
+Entry point: App.tsx
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+Main source code: src/ folder
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+Model management and hardware checks are handled via utilities in src/utils/
 
-## Step 3: Modify your app
+Model downloads use Hugging Face URLs; you can customize them in config
 
-Now that you have successfully run the app, let's make changes!
+📁 Folder Structure
+bash
+Copy
+Edit
+localgpt-llama.rn/
+│
+├── android/              # Android native code
+├── ios/                  # iOS native code
+├── src/                  # Main app logic
+│   ├── components/       # UI components
+│   ├── screens/          # App screens
+│   ├── utils/            # Model download, hardware checks, etc.
+│   └── config/           # Constants and model settings
+├── App.tsx               # App entry point
+├── package.json
+├── README.md             # This file
+└── ...
+✅ Requirements
+Minimum 4GB RAM on device for most LLaMA models
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+Works on physical Android and iOS devices (simulators may not handle model inference)
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+llama.rn backend integrated directly (no llama.run)
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+📚 Resources
+React Native Docs
 
-## Congratulations! :tada:
+llama.rn GitHub
 
-You've successfully run and modified your React Native App. :partying_face:
+Hugging Face Models
 
-### Now what?
+CocoaPods Docs
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+🤝 Contributing
+Pull requests and issues are welcome! If you're using the app or improving it, feel free to fork and contribute.
 
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+🛡️ License
+This project is licensed under the MIT License.
